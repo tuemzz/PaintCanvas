@@ -1,0 +1,86 @@
+body{
+    background: #aaa;
+    padding-top: 50px;
+}
+#draw{
+    background: #fff;
+    display: block;
+    margin: 0 auto;
+}
+
+#command-bar{
+    position: fixed;
+    right: 0;
+    top: 30%;
+    height: 400px;
+    width: 100px;
+    background: #80bdff;
+}
+#command-bar>.command-item{
+    display: inline-block;
+    float: left;
+    width: 100%;
+    height: 50px;
+    transition: background 0.5s;
+    background: #fdfdfe;
+}
+#command-size{
+    position: relative;
+}
+#command-size>div{
+    position: absolute;
+    background: #fdfdfe;
+    transition: transform 1s;
+    white-space: nowrap;
+}
+#command-size>div>span{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+}
+#command-size>div>input{
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+}
+#command-size:hover>div{
+    transform: translateX(-100%);
+}
+
+.load-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .9);
+    text-align: center;
+    padding: 300px 0;
+}
+.load-screen::after{
+    content: "Đợi tí load đã =))";
+    color: #fff;
+    display: block;
+    margin-top: 100px;
+}
+.load-screen::before{
+    content: "";
+    border-left: 5px solid #fff;
+    border-top: 5px solid #fff;
+    border-right: 5px solid #fff;
+    border-bottom: 5px solid rgba(0, 0, 0, 0);
+    padding: 50px;
+    border-radius: 50%;
+    animation: spin .5s linear infinite;
+    display: block;
+    width: 50px;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    from {transform: rotate(0)}
+    to {transform: rotate(360deg)}
+  }
