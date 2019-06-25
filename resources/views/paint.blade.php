@@ -34,7 +34,7 @@
     </div>
     <footer class="pt-3 pb-3 mt-5 text-center table-dark">Nguyen Thanh Tuan</footer>
     <div class="load-screen"></div>
-    <script src="{{ URL::asset('js/draw.js') }}"></script>
+    <script src="js/draw.js"></script>
 </body>
 
 </html>
